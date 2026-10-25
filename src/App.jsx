@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import Lenis from "lenis"
-import { FadeUpAnimProvider } from "./context/fadeUpAnimProvider"
+import { FadeUpAnimProvider } from "./context/FadeUpAnimProvider"
 import Home from "./Pages/Home/Home"
 import Projects from "./Pages/Projects/Projects"
 import Error404 from "./Pages/Error404/Error404"
