@@ -1,0 +1,39 @@
+.contact-form,
+.contact-form * {
+    transition: all .25s ease-in-out;
+}
+
+.contact-form form input:focus-visible,
+.contact-form form textarea:focus-visible {
+    border: 1px solid #d7371d75;
+    box-shadow: 0 0 20px 1px #d7361d30;
+    outline: none;
+}
+
+.contact-form form input {
+    min-height: 48px;
+    transition: all .25s ease-in-out;
+}
+
+.errorMsg {
+    border: 1px solid red;
+    box-shadow: 0 0 16px 1px #ff00004d;
+}
+
+.validInp:focus-visible {
+    border: 1px solid green;
+    box-shadow: 0 0 16px 1px green;
+}
+
+.contact-links:hover {
+
+    span,
+    svg {
+        color: var(--color-accent);
+    }
+}
+
+form p.messageBox::first-letter {
+    font-size: 22px;
+    line-height: 28px;
+}

@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "projectName": "VoltCart - Ecommerce Web App",
+        "metaTitle": "VoltCart — React E-commerce Project | Mohammed Talib",
+        "shortDescription": "A React-powered electronics store with dynamic product discovery, persistent cart management, custom checkout logic, and online payments.",
+        "description": "VoltCart is a modern React-based e-commerce platform designed to deliver a smooth, engaging, and intuitive shopping experience for electronics. Built with a focus on practical functionality and polished interactions, the application combines dynamic content, flexible product discovery, persistent cart management, and an integrated checkout experience.\n Product and blog listings are populated through API integration, with dedicated detail pages that allow users to explore individual items and articles. Product discovery is enhanced through search, category-based filtering, and price-based filtering, helping users navigate the catalogue efficiently. Global cart management maintains shopping state across the application, while localStorage persistence retains cart items between visits and browser sessions.\n The checkout workflow incorporates custom business logic for calculating shipping charges, splitting GST into applicable components, and updating order totals. Razorpay integration provides an online payment experience, supported by dedicated order success and cancellation pages to handle different checkout outcomes. EmailJS powers contact inquiries, connecting the storefront with a convenient communication channel without requiring a conventional backend contact-form service.\n The interface combines responsive layouts with smooth scrolling through Lenis and motion effects using Framer Motion, creating a more engaging browsing experience while keeping interactions purposeful. Built with React and modern frontend techniques, VoltCart brings together reusable UI components, API-driven rendering, state management, client-side persistence, payment integration, and custom commerce calculations in one cohesive application.\n The project demonstrates practical frontend development skills by translating an e-commerce concept into a functional, multi-page shopping experience that addresses product exploration, cart handling, checkout calculations, payments, and customer communication.",
+        "thumbnail": "/assets/projects/voltcart-final-proj.png",
+        "techIcon": "/assets/technologies/react.png",
+        "techStack": "React",
+        "techStackRole": "Frontend UI library",
+        "supportingTechnologiesOld": "React, Tailwind CSS, Radix UI, React Router DOM, React Image Gallery, Swiper JS, Lenis, Framer Motion, Email JS, API Integration, Custom Backend Admin Panel, Razorpay",
+        "supportingTechnologies": [
+            {
+                "category": "UI & Routing",
+                "items": [
+                    "Tailwind CSS",
+                    "Radix UI",
+                    "React Router"
+                ]
+            },
+            {
+                "category": "Interactions & Media",
+                "items": [
+                    "Framer Motion",
+                    "Lenis",
+                    "Swiper",
+                    "React Image Gallery"
+                ]
+            },
+            {
+                "category": "Integrations & Payments",
+                "items": [
+                    "EmailJS",
+                    "Razorpay",
+                    "API Integration"
+                ]
+            }
+        ],
+        "projectURL": "https://voltcart-ecom-app.vercel.app/",
+        "slug": "voltcart"
+    },
+    {
+        "id": 2,
+        "projectName": "Beyond Basic Home",
+        "metaTitle": "Beyond Basic Home — WooCommerce Website | Mohammed Talib",
+        "shortDescription": "A WooCommerce home décor store with curated product listings, editorial content, and a streamlined checkout experience!",
+        "description": "Beyond Basic Home is a WordPress-powered e-commerce website designed to showcase premium home décor through an engaging and intuitive shopping experience. Built using WordPress, Elementor, and WooCommerce, the platform combines product discovery, brand storytelling, editorial content, and essential online-store functionality.\n The product catalogue organizes décor collections into browsable listings, allowing visitors to explore products and view their individual details. A dedicated blog section provides space for sharing interior design inspiration, craftsmanship stories, and home styling ideas, complementing the shopping experience with relevant editorial content.\n Elementor was used to build the website’s visual layouts and support intuitive navigation across key sections. WooCommerce powers the core e-commerce functionality, including product management, customer accounts, user management, shopping cart operations, and the checkout process. Razorpay integration enables online payments, connecting product selection with order completion. Gravity Forms handles contact form submissions, providing visitors with a convenient way to send inquiries.\n Overall, Beyond Basic Home demonstrates the use of WordPress as a flexible content management system, WooCommerce for online-store operations, and Elementor for page building, supported by integrations that facilitate customer communication and online transactions.",
+        "thumbnail": "/assets/projects/bbh-final-proj.webp",
+        "techIcon": "/assets/technologies/woocommerce.png",
+        "techStack": "WooCommerce",
+        "techStackRole": "E-commerce platform for WordPress",
+        "supportingTechnologiesOld": "React, Tailwind CSS, Radix UI, React Router DOM, React Image Gallery, Swiper JS, Lenis, Framer Motion, Email JS, API Integration, Custom Backend Admin Panel, Razorpay",
+        "supportingTechnologies": [
+            {
+                "category": "CMS & Page Building",
+                "items": [
+                    "WordPress",
+                    "Elementor Page Builder",
+                    "Swiper"
+                ]
+            },
+            {
+                "category": "Frontend Scripting",
+                "items": [
+                    "JavaScript",
+                    "jQuery"
+                ]
+            },
+            {
+                "category": "E-commerce & Forms",
+                "items": [
+                    "WooCommerce",
+                    "Gravity Forms",
+                    "Razorpay"
+                ]
+            },
+            {
+                "category": "SEO & Analytics",
+                "items": [
+                    "Yoast SEO",
+                    "Google Tag Manager",
+                    "Google for WooCommerce"
+                ]
+            }
+        ],
+        "projectURL": "https://www.beyondbasichome.com/",
+        "slug": "beyond-basic-home"
+    },
+    {
+        "id": 3,
+        "projectName": "Nexora - Business Consultancy",
+        "metaTitle": "Nexora — Custom WordPress Theme | Mohammed Talib",
+        "shortDescription": "A custom WordPress consultancy website featuring dynamic content, responsive layouts, interactive forms, and smooth animations.",
+        "description": "Nexora is a self-initiated business consultancy website project developed to strengthen practical WordPress development skills and explore the implementation of a fully customized theme. Built using WordPress, Core PHP, HTML, CSS, JavaScript, and Bootstrap, the project focuses on creating a professional digital experience with dynamic content management, responsive layouts, and reusable theme components.\n The website presents consultancy services, industry-specific solutions, pricing plans, and business information through structured layouts that help visitors explore the available offerings and navigate toward relevant information. Advanced Custom Fields (ACF) and Custom Post Types (CPTs) power dynamic content management, allowing structured information to be maintained through the WordPress dashboard rather than hardcoded into individual page templates.\n The custom theme integrates responsive layouts and reusable components to maintain a consistent interface across desktop, tablet, and mobile devices. Bootstrap supports the responsive grid and layout system, while Swiper provides interactive sliders for selected content sections. Lenis smooth scrolling and scroll-triggered animations add movement to the browsing experience, with the aim of keeping transitions engaging without overwhelming the interface.\n Contact Form 7 handles enquiry submissions, providing visitors with a direct way to initiate conversations and request further information. Yoast SEO supports the website's search optimization through its SEO configuration and content-management tools, complementing a structured approach to page content and discoverability.\n The project brings together custom WordPress theme development, PHP-based templating, structured content modelling, responsive frontend development, animation libraries, and essential website integrations. It demonstrates the practical application of WordPress beyond pre-built themes and page builders, with an emphasis on maintainable code, dynamic content, and a cohesive digital experience for a business consultancy.",
+        "thumbnail": "/assets/projects/nexora-final-proj.png",
+        "techIcon": "/assets/technologies/wp.png",
+        "techStack": "WordPress",
+        "techStackRole": "CMS with a custom theme",
+        "supportingTechnologiesOld": "React, Tailwind CSS, Radix UI, React Router DOM, React Image Gallery, Swiper JS, Lenis, Framer Motion, Email JS, API Integration, Custom Backend Admin Panel, Razorpay",
+        "supportingTechnologies": [
+            {
+                "category": "WordPress Development",
+                "items": [
+                    "WordPress Custom Theme",
+                    "Core PHP",
+                    "Advanced Custom Fields (ACF)",
+                    "Custom Post Types"
+                ]
+            },
+            {
+                "category": "Frontend Development",
+                "items": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Bootstrap"
+                ]
+            },
+            {
+                "category": "Interactions & Animation",
+                "items": [
+                    "Swiper",
+                    "Lenis",
+                    "Scroll Animations"
+                ]
+            },
+            {
+                "category": "Forms & SEO",
+                "items": [
+                    "Contact Form 7",
+                    "Yoast SEO"
+                ]
+            }
+        ],
+        "projectURL": "https://nexora-kw.free.nf/",
+        "slug": "nexora"
+    },
+    {
+        "id": 4,
+        "projectName": "Hamrah NL",
+        "metaTitle": "Hamrah NL — Elementor WordPress Website | Mohammed Talib",
+        "shortDescription": "A responsive WordPress website for a Dutch language school, showcasing courses, integration programs, and learning resources.",
+        "description": "Hamrah is a WordPress website developed for a language school based in Rotterdam, Netherlands, designed to present its educational services through a professional, responsive, and user-friendly digital experience. Built with WordPress and Elementor, the website organizes a diverse range of learning opportunities into accessible sections, helping individuals and businesses explore relevant courses and training programs.\n The website’s structured page layouts and intuitive navigation help visitors discover relevant services, understand available learning options, and find the information they need. Swiper enhances selected interface elements with interactive content sliders, while JavaScript and jQuery support frontend interactions and dynamic behavior. Elementor was used to build and manage page layouts, providing flexibility for presenting educational content across different screen sizes. WP Rocket supports website caching and performance optimization, while Yoast SEO assists with on-page search engine optimization and content discoverability.\n Google Tag Manager and Google Site Kit provide tools for managing website tracking integrations and accessing website analytics and search performance insights. Together, these integrations support a more informed approach to monitoring website engagement and improving its digital presence.\n This project demonstrates practical experience in WordPress website development, Elementor-based page building, frontend interactions, performance optimization tools, and SEO and analytics integrations.",
+        "thumbnail": "/assets/projects/hamrah-nl-final-proj.webp",
+        "techIcon": "/assets/technologies/elementor.png",
+        "techStack": "Elementor",
+        "techStackRole": "Visual page builder for WordPress",
+        "supportingTechnologiesOld": "React, Tailwind CSS, Radix UI, React Router DOM, React Image Gallery, Swiper JS, Lenis, Framer Motion, Email JS, API Integration, Custom Backend Admin Panel, Razorpay",
+        "supportingTechnologies": [
+            {
+                "category": "CMS & Page Building",
+                "items": [
+                    "WordPress",
+                    "Elementor Page Builder",
+                    "Swiper"
+                ]
+            },
+            {
+                "category": "Frontend Scripting",
+                "items": [
+                    "JavaScript",
+                    "jQuery"
+                ]
+            },
+            {
+                "category": "CDN and Caching",
+                "items": [
+                    "WP Rocket"
+                ]
+            },
+            {
+                "category": "SEO & Analytics",
+                "items": [
+                    "Yoast SEO",
+                    "Google Tag Manager",
+                    "Google Site Kit"
+                ]
+            }
+        ],
+        "projectURL": "https://hamrah.nl/",
+        "slug": "hamrah-nl"
+    }
+]

@@ -1,0 +1,30 @@
+.tech-chip {
+    padding: 6px 16px;
+    border-radius: 6px;
+    background-color: var(--color-bg-grey);
+    color: var(--color-text-dark-black);
+    letter-spacing: .8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* >>>>>>>>>>>>>>>> try if need animation on logo in future */
+.react-img {
+    /* animation: react_rotate 6s infinite linear; */
+}
+
+@keyframes react_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ENDS CSS */
+

@@ -1,0 +1,76 @@
+import { Link } from "react-router-dom";
+
+const CustomButton = ({
+    as = "a",
+    href,
+    to,
+    type,
+    // disabled,
+    children,
+    icon = (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" z-[99] w-4 h-4 " >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+    </svg>),
+    className = "",
+    onClick,
+    ...props
+}) => {
+
+    const commonProps = {
+        className,
+        onClick,
+        ...props,
+    };
+
+
+    if (as === "Link") {
+        return (
+
+            <Link to={to}  {...commonProps} >
+                <span className=" btn-bg-hov  " ></span>
+                <span className=" z-[99] " >{children}</span>
+                {icon}
+            </Link>
+
+        )
+    }
+
+    if (as === "button") {
+        return (
+
+            <button
+                type={type}
+                // disabled={disabled}
+                {...commonProps}
+            >
+                <span className=" btn-bg-hov  " ></span>
+                <span className=" z-[99] " >{children}</span>
+                {icon}
+            </button>
+
+        )
+    }
+
+    // if (as === "a") {
+    //     return (
+
+    //         <a href={href}  {...commonProps} >
+    //             {children}
+    //             {icon}
+    //         </a>
+
+    //     )
+    // }
+
+    return (
+
+        <a href={href}  {...commonProps} >
+            <span className=" btn-bg-hov  " ></span>
+            <span className=" z-[99] " >{children}</span>
+            {icon}
+        </a>
+
+    )
+
+}
+
+export default CustomButton;

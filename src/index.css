@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Global Stylings */
+@theme {
+  --font-dm-serif: "DM Serif Display", serif;
+  /* Used */
+  --font-manrope: "Manrope", sans-serif;
+  /* Used */
+  --color-accent: #d7371d;
+  /* Used */
+  --color-bg-offwhite: #F6F3EE;
+  /* Used */
+  --color-bg-chocolate: #171214;
+  /* Used */
+  --color-bg-grey: #e9e4dc;
+  /* Used */
+
+  --color-text-dark-black: #171214;
+  /* Used */
+  --color-text-dark-grey: #5d5751;
+  /* Used */
+
+  --color-text-light-white: #F6F3EE;
+  /* Used */
+  --color-text-light-grey: #fdfcf7a6;
+  --color-text-light-extra: #ead6ce;
+
+
+  --color-border-color: #bcb6af;
+
+  /* tab from 768 to 1023 */
+  --breakpoint-tab: 768px;
+  /* Used */
+
+  /* gt-tab min 1024 to 1200   */
+  --breakpoint-gt-tab: 1024px;
+  /* Used */
+
+  /* desktop min 1201 no max limit  */
+  --breakpoint-desktop: 1201px;
+  /* Used */
+
+}
+
+:root {
+  --dm-serif-font: "DM Serif Display", serif;
+  --manrope-font: "Manrope", sans-serif;
+  --accent-color: #d7371d;
+  --bg-offwhite-color: #F6F3EE;
+  --bg-chocolate-color: #171214;
+  --bg-grey-color: #e9e4dc;
+
+  --text-dark-black-color: #171214;
+  --text-dark-grey-color: #5d5751;
+
+  --text-light-white-color: #F6F3EE;
+  --text-light-grey-color: #fdfcf7a6;
+  --text-light-extra-color: #ead6ce;
+
+  --border-color: #bcb6af;
+
+}
+
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--color-bg-offwhite);
+}
+
+
+html {
+  font-family: var(--manrope-font);
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: var(--bg-offwhite-color);
+  overflow-x: hidden;
+}
+
+.site-header {
+  z-index: 999;
+}
+
+.container {
+  max-width: 1380px;
+  margin: auto;
+  padding: 0 50px;
+}
+
+.font-hero-sect-title {
+  font-family: var(--dm-serif-font);
+  font-weight: 400;
+  font-size: 138px;
+  line-height: 125px;
+}
+
+.font-slug {
+  display: block;
+  font-family: var(--manrope-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+}
+
+.font-para-norm {
+  font-family: var(--manrope-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.font-btn-text {
+  font-family: var(--manrope-font);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.font-h2 {
+  font-family: var(--dm-serif-font);
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 90px;
+}
+
+.font-h3 {
+  font-family: var(--dm-serif-font);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.font-additional-h {
+  font-family: var(--dm-serif-font);
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 115px;
+}
+
+.font-h4 {
+  font-family: var(--dm-serif-font);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.font-cta-h {
+  font-family: var(--dm-serif-font);
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 69px;
+}
+
+.font-menu-links {
+  font-family: var(--manrope-font);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #5d5751;
+  transition: all .25s ease-in-out;
+  padding: 8px 0;
+  position: relative;
+}
+
+.font-menu-links[data-active="true"] {
+  color: var(--text-dark-black-color);
+}
+
+.font-menu-links.active {
+  color: var(--text-dark-black-color);
+}
+
+.font-menu-links::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: all .25s ease-in-out;
+}
+
+.font-menu-links[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+.font-menu-links.active::after {
+  transform: scaleX(1);
+}
+
+.font-menu-links:hover {
+  transition: all .25s ease-in-out;
+  color: var(--text-dark-black-color);
+}
+
+.font-menu-links:hover::after {
+  transition: all .25s ease-in-out;
+  transform: scaleX(1);
+}
+
+section[id] {
+  scroll-margin-top: 70px;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ENDS Global Stylings */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Header Stylings */
+
+.brand-logo,
+.brand-logo-sticker {
+  transition: all .25s ease-in-out;
+}
+
+.brand-logo:hover .brand-logo-sticker {
+  transform: rotate(-7deg);
+  transition: all .25s ease-in-out;
+}
+
+#navIcon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+  transition: all .25s ease-in-out;
+}
+
+#navIcon::before,
+#navIcon::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  display: flex;
+  position: absolute;
+  background-color: var(--bg-chocolate-color);
+  transition: all .25s ease-in-out;
+}
+
+#navIcon::before {
+  transform: translateY(-7px);
+}
+
+#navIcon::after {
+  transform: translateY(7px);
+}
+
+#navIcon[data-active-menu="true"]::before {
+  transform: rotate(45deg);
+}
+
+#navIcon[data-active-menu="true"]::after {
+  transform: rotate(-45deg);
+}
+
+.mobile-nav {
+  transition: all .25s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  right: -540px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-nav[data-active-menu="true"] {
+  transition: all .25s ease-in-out;
+  right: 0;
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ENDS Header Stylings */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Footer Stylings */
+
+.footer-links * {
+  transition: all .25s ease-in-out;
+
+  a:hover,
+  a:hover svg {
+    color: var(--text-light-white-color);
+  }
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ENDS Footer Stylings */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Button CSS */
+
+.button,
+.button * {
+  transition: all .4s ease-in-out;
+}
+
+.button {
+  font-family: var(--manrope-font);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.button.button-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.button.button-secondary {
+  background-color: transparent;
+  border: 2px solid #a49d95;
+  color: #171214;
+}
+
+.button.button-dark {
+  background-color: transparent;
+  border: 2px solid #f6f3ee99;
+  color: #f6f3ee;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  .btn-bg-hov {
+    display: none;
+  }
+}
+
+.button.button-primary:hover {
+  transition: all .4s ease-in-out;
+}
+
+.button:not(.still_icon):hover svg {
+  transform: rotate(-45deg);
+}
+
+.button.button-secondary:hover {
+  color: white;
+  border: 2px solid var(--accent-color);
+}
+
+.button.button-dark:hover {
+  border: 2px solid var(--accent-color);
+}
+
+.btn-bg-hov {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 9;
+}
+
+.button:hover .btn-bg-hov {
+  transform: scaleX(1);
+}
+
+.button.button-primary .btn-bg-hov {
+  background-color: var(--bg-chocolate-color);
+  border: 2px solid var(--bg-chocolate-color);
+}
+
+.button.button-secondary .btn-bg-hov {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.button.button-dark .btn-bg-hov {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ENDS Button CSS */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media Queries */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .font-hero-sect-title {
+    font-size: 110px;
+    line-height: 110px;
+  }
+
+  .font-h2 {
+    font-size: 72px;
+    line-height: 68px;
+  }
+
+
+  .font-cta-h {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .font-hero-sect-title {
+    font-size: 96px;
+    line-height: 87px;
+  }
+
+  .font-h2 {
+    font-size: 72px;
+    line-height: 68px;
+  }
+
+  .font-additional-h {
+    font-size: 96px;
+    line-height: 86px;
+  }
+
+  .font-h4 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .font-cta-h {
+    font-size: 48px;
+    line-height: 46px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-hero-sect-title {
+    font-size: 60px;
+    line-height: 55px;
+  }
+
+  .font-h2 {
+    font-size: 50px;
+    line-height: 48px;
+  }
+
+  .font-additional-h {
+    font-size: 72px;
+    line-height: 65px;
+  }
+
+  .font-h4 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .font-cta-h {
+    font-size: 48px;
+    line-height: 46px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .font-menu-links {
+    font-family: var(--dm-serif-font);
+    font-size: 54px;
+    line-height: 60px;
+  }
+
+  header .button.button-primary {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 12px 46px;
+    gap: 14px;
+  }
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ENDS Media Queries */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>> LENIS Req CSS */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>> ENDS LENIS Req CSS */
+
+
+
+
+/* ENDS CSS */
+
+

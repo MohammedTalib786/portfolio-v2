@@ -1,0 +1,84 @@
+.AccordionRoot,
+.AccordionRoot * {
+    transition: all .25s ease-in-out;
+}
+
+.AccordionRoot {
+    width: 100%;
+}
+
+.AccordionItem {
+    overflow: hidden;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.AccordionItem:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.AccordionItem:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.AccordionItem:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.AccordionItem:focus-within {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 2px var(--mauve-12);
+}
+
+.AccordionHeader {
+    display: flex;
+}
+
+.AccordionContent {
+    overflow: hidden;
+}
+
+.AccordionItem[data-state="open"] .accord_trigger svg {
+    rotate: 180deg;
+}
+
+.AccordionItem[data-state="open"] {
+    background-color: #e3563f;
+}
+
+.AccordionItem[data-state="open"] .accord_trigger,
+.AccordionItem[data-state="open"] .AccordionContent {
+    color: white;
+}
+
+.AccordionContent[data-state="open"] {
+    animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.AccordionContent[data-state="closed"] {
+    animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: var(--radix-accordion-content-height);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+
+    to {
+        height: 0;
+    }
+}

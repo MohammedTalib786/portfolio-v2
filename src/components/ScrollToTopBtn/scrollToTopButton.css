@@ -1,0 +1,19 @@
+/* .onScrollBtn */
+.onScrollBtn {
+    bottom: 40px;
+    right: 25px;
+    opacity: 1;
+    pointer-events: all;
+    transition: all .25s ease-in-out;
+}
+
+.scrollToTopBtn,
+.scrollToTopBtn svg {
+    transition: all .25s ease-in-out;
+}
+
+.scrollToTopBtn:active {
+    scale: 0.92;
+    transition: all .25s ease-in-out;
+}
+

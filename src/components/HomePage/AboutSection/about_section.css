@@ -1,0 +1,31 @@
+.process-grid {
+    border: 1px solid var(--border-color);
+}
+
+
+@media (min-width: 1024px) {
+    .process-step:not(:last-child) {
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+    .process-step:not(:last-child) {
+        width: 50%;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .process-step:last-child {
+        width: 100%;
+    }
+
+    .process-step:nth-child(odd):not(:last-child) {
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .process-step:not(:last-child) {
+        border-bottom: 1px solid var(--border-color);
+    }
+}
