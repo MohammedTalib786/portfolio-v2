@@ -66,7 +66,7 @@ const App = () => {
 
             <Route index element={<Home />} />
 
-            <Route path="/projects/:slug" element={<Projects />} />
+            <Route path="projects/:slug" element={<Projects />} />
 
             <Route path="*" element={<Error404 />} />
 
