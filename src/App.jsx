@@ -47,7 +47,7 @@ const App = () => {
     transition: { duration: 1, ease: "easeInOut" },
     viewport: {
       // margin: "-30px",
-      amount: .55,
+      amount: .35,
       once: true,
     }
   }

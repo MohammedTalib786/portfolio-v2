@@ -10,7 +10,7 @@ const ProjectSection = () => {
     const bottomTextRef = useRef(null);
 
     const isInView = useInView(bottomTextRef, {
-        amount: .55,
+        amount: .35,
         once: true
     });
 
@@ -24,34 +24,35 @@ const ProjectSection = () => {
                     <div className=" gt-tab:w-[70%] w-full ">
 
                         <motion.span
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 25 }}
                             whileInView={
                                 isInView
                                     ? { opacity: 1, y: 0 }
-                                    : { opacity: 0, y: 50 }
+                                    : { opacity: 0, y: 25 }
                             }
                             transition={{
-                                duration: 1, 
-                                delay: .35,
+                                duration: 1,
+                                delay: .25,
                                 ease: "easeInOut",
                             }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
                             className=" font-slug text-accent ">Selected Work</motion.span>
 
                         <motion.h2
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 35 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: "easeInOut" }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
                             ref={bottomTextRef}
+
                             className=" font-h2 text-text-dark-black mt-6 " >Ideas, made <br className=" gt-tab:block hidden " />tangible.</motion.h2>
                     </div>
 
@@ -64,7 +65,7 @@ const ProjectSection = () => {
                     <div className=" desktop:pt-20 gt-tab:pt-17 tab:pt-15 pt-10 tab:grid tab:grid-cols-[repeat(2,1fr)] tab:gap-x-7 tab:gap-y-16 flex flex-col gap-10 " >
                         {
                             projectsData.map(elem => {
-                                return <ProjectCard
+                                return <ProjectCard 
                                     key={elem.id}
                                     projectName={elem.projectName}
                                     shortDescription={elem.shortDescription}

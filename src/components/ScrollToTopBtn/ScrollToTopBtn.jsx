@@ -9,10 +9,11 @@ const ScrollToTopBtn = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            setIsVisible(scrollTop > 100);
+            setIsVisible(scrollTop > 200);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
+
     }, []);
 
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -20,7 +21,7 @@ const ScrollToTopBtn = () => {
     return (
         <>
             <button
-                className={` ${isVisible ? "onScrollBtn" : ""}
+                className={` ${isVisible ? "onScrollBtn" : ""} 
                 opacity-0 pointer-events-none scrollToTopBtn bg-accent w-[35px] h-[35px] text-white flex justify-center items-center fixed z-[9999] cursor-pointer `}
                 onClick={scrollToTop} >
 

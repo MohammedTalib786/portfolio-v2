@@ -141,8 +141,8 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=9987034815"
+                                <a 
+                                    href="https://api.whatsapp.com/send?phone=+919987034815"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className=" font-manrope text-[14px]/[20px] font-normal text-[#f6f3eea6] "  >

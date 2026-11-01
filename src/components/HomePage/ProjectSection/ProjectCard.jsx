@@ -23,7 +23,8 @@ const ProjectCard = ({
                 </Link>
 
                 <div className=" projImg ">
-                    <img src={thumbnail} className=" w-full  " />
+                    <img src={thumbnail} className=" w-full  "
+                        alt={projectName ? projectName + " Project Image" : "Project Name"} />
                 </div>
 
                 <div className=" mt-4 pt-4 border-t border-bg-chocolate flex gt-tab:flex-row flex-col   ">
@@ -40,6 +41,7 @@ const ProjectCard = ({
                             target='_blank'
                             rel="noopener noreferrer"
                             className=" arrow-btn min-w-10 max-w-10 w-full h-10 gt-tab:flex hidden justify-center items-center relative z-20  "  >
+                            <span className=" hidden " >View Live Project</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" w-4 h-4  -rotate-45  ">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>

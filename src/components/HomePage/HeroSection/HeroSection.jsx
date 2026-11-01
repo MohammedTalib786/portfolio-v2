@@ -14,7 +14,7 @@ const HeroSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeInOut" }}
                     viewport={{
-                        amount: .55,
+                        amount: .35,
                         once: true
                     }}
 
@@ -27,7 +27,7 @@ const HeroSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.15, ease: "easeInOut" }}
                     viewport={{
-                        amount: .55,
+                        amount: .35,
                         once: true
                     }}
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.65, ease: "easeInOut" }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.8, ease: "easeInOut" }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 

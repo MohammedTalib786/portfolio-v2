@@ -4,24 +4,34 @@ import ContactFormSect from "../../components/ContactFormSect/ContactFormSect";
 import ScrollToTopFunc from "../../components/ScrollToTopFunc/ScrollToTopFunc";
 import ProjectInfo from "../../components/ProjectPage/ProjectInfo/ProjectInfo";
 import TechInfo from "../../components/ProjectPage/TechInfo/TechInfo";
-import ProjectNotFound from "../../components/ProjectPage/ProjectNotFound/ProjectNotFound";
 import projectsData from '../../projects.json'
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import Error404 from "../Error404/Error404";
+import SEO from "../../components/SEO/SEO";
 
 
 const Projects = () => {
 
 
     let { slug } = useParams();
-    let project = projectsData.find(elem => elem.slug == slug)
+    let project = projectsData.find(elem => elem.slug === slug);
+
+    // console.log('project', project)
 
     if (!project) {
-        return <ProjectNotFound />
+        return <Error404 />
     }
-    
-    useDocumentTitle(project.metaTitle);
+
+
     return (
         <>
+
+            <SEO
+                title={project?.metaTitle}
+                description={project?.metaDescription}
+                path={`projects/${project?.slug}`}
+            />
+
+
             <ScrollToTopFunc />
 
             <ProjectInfo project={project} />

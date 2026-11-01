@@ -17,45 +17,45 @@ const ProjectInfo = ({ project }) => {
 
         <div className="  tab:py-20 py-13  flex flex-col  " >
 
-          <motion.h2
-            initial={{ opacity: 0, y: 50 }}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{
-              amount: .55,
+              amount: .35,
               once: true
             }}
 
             className="  font-dm-serif font-normal tab:text-[48px]/[48px] text-[36px]/[42px] text-text-dark-black " >
-            {project.projectName}
-          </motion.h2>
+            {project?.projectName}
+          </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.15, ease: "easeInOut" }}
             viewport={{
-              amount: .55,
+              amount: .35,
               once: true
             }}
 
             className=" font-manrope font-normal gt-tab:text-[24px]/[34px] text-[18px]/[28px] text-text-dark-black my-6 " >
-            {project.shortDescription}
+            {project?.shortDescription}
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.25, ease: "easeInOut" }}
             viewport={{
-              amount: .55,
+              amount: .35,
               once: true
             }}
 
             className=" flex w-full  "  >
 
             <CustomButton
-              href={project.projectURL}
+              href={project?.projectURL}
               target="_blank"
               rel="noopener noreferrer"
               className=" button button-primary still_icon "
@@ -69,17 +69,20 @@ const ProjectInfo = ({ project }) => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.65, ease: "easeInOut" }}
             viewport={{
-              amount: .55,
+              amount: .35,
               once: true
             }}
 
             className=" mt-15 mb-10 " ref={fancyboxRef}  >
-            <a data-fancybox href={project.thumbnail} data-caption={`${project.projectName}&nbsp;&nbsp;|&nbsp;&nbsp;Project reference image`} >
-              <img src={project.thumbnail} alt={`${project.projectName} reference image`} className='w-full  ' />
+            <a data-fancybox href={project?.thumbnail} data-caption={`${project?.projectName}&nbsp;&nbsp;|&nbsp;&nbsp;Project reference image`} >
+
+              <img src={project?.thumbnail}
+                alt={`${project?.projectName} Project Image`} className='w-full  ' />
+
             </a>
           </motion.div>
 
@@ -90,7 +93,7 @@ const ProjectInfo = ({ project }) => {
           <div className=" proj-full-desc-cont flex flex-col gap-2 " >
 
             <div className="space-y-3 ">
-              {project.description.split("\n").map((paragraph, index) => (
+              {project?.description.split("\n").map((paragraph, index) => (
                 <p key={index} className=" font-manrope font-medium text-[16px]/[28px] text-text-dark-black  ">
                   {paragraph}
                 </p>

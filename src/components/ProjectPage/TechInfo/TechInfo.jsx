@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
-
+import { useRef } from 'react'
+import { motion, useInView } from "motion/react";
 import '../project_page.css'
 
 const TechInfo = ({ project }) => {
-
 
   let tech = project?.supportingTechnologies ?? [];
 
@@ -17,6 +16,13 @@ const TechInfo = ({ project }) => {
 
   // })
 
+  const textRef = useRef(null);
+
+  const isInView = useInView(textRef, {
+    once: true,
+    amount: .35,
+  });
+
   return (
 
     <section className="  desktop:py-21 tab:py-20 py-13 border-t border-border-color  "  >
@@ -25,8 +31,37 @@ const TechInfo = ({ project }) => {
 
         <div className="  " >
 
-          <h2 className=" font-h3 text-text-dark-black mb-3 " >Built with</h2>
-          <p className=" w-full font-medium font-para-norm text-text-dark-black " >The core technology, supporting tools and integrations behind this project.</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{
+              amount: .1,
+              once: true
+            }}
+
+            ref={textRef}
+
+            className=" font-h3 text-text-dark-black mb-3 " >Built with</motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={
+              isInView
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 20 }
+            }
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+              delay: .25
+            }}
+            viewport={{
+              amount: .1,
+              once: true
+            }}
+
+            className=" w-full font-medium font-para-norm text-text-dark-black " >The core technology, supporting tools and integrations behind this project.</motion.p>
 
         </div>
 
@@ -38,10 +73,10 @@ const TechInfo = ({ project }) => {
 
             <div className=" w-full  ">
 
-              <img src={project.techIcon} alt="" className=' react-img w-full max-w-[80px] ' />
+              <img src={project?.techIcon} alt="Technology Logo" className=' react-img w-full max-w-[80px] ' />
 
-              <strong className=" block mt-3 font-manrope text-[18px]/[26px] font-bold text-text-dark-black "  >{project.techStack}</strong>
-              <p className=" mt-1 font-manrope text-[16px]/[24px] font-normal text-text-dark-grey  "  >{project.techStackRole}</p>
+              <strong className=" block mt-3 font-manrope text-[18px]/[26px] font-bold text-text-dark-black "  >{project?.techStack}</strong>
+              <p className=" mt-1 font-manrope text-[16px]/[24px] font-normal text-text-dark-grey  "  >{project?.techStackRole}</p>
 
             </div>
 

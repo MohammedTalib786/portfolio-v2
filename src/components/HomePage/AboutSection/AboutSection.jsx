@@ -40,7 +40,7 @@ const AboutSection = () => {
 
     const isInView = useInView(bottomTextRef, {
         once: true,
-        amount: .55,
+        amount: .35,
     });
 
     return (
@@ -98,7 +98,7 @@ const AboutSection = () => {
                                 delay: .35
                             }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
@@ -109,7 +109,7 @@ const AboutSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: "easeInOut" }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
@@ -151,7 +151,7 @@ const AboutSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: "easeInOut" }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
@@ -162,7 +162,7 @@ const AboutSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: "easeInOut", delay: .35 }}
                             viewport={{
-                                amount: .55,
+                                amount: .35,
                                 once: true
                             }}
 
