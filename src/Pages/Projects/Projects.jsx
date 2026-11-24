@@ -10,27 +10,17 @@ import SEO from "../../components/SEO/SEO";
 
 
 const Projects = () => {
-
-
     let { slug } = useParams();
     let project = projectsData.find(elem => elem.slug === slug);
 
-    // console.log('project', project)
-
-    if (!project) {
-        return <Error404 />
-    }
-
+    if (!project) return <Error404 />
 
     return (
         <>
-
             <SEO
                 title={project?.metaTitle}
                 description={project?.metaDescription}
-                path={`projects/${project?.slug}`}
-            />
-
+                path={`projects/${project?.slug}`}   />
 
             <ScrollToTopFunc />
 

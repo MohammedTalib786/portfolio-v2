@@ -20,7 +20,7 @@ const ProjectNotFound = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, ease: "easeInOut" }}
                         viewport={{
-                            amount: .35,
+                            amount: .15,
                             once: true
                         }}
 
@@ -34,7 +34,7 @@ const ProjectNotFound = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.15, ease: "easeInOut" }}
                         viewport={{
-                            amount: .35,
+                            amount: .15,
                             once: true
                         }}
 
@@ -45,7 +45,7 @@ const ProjectNotFound = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
                         viewport={{
-                            amount: .35,
+                            amount: .15,
                             once: true
                         }}
                         className="  font-h3 text-text-dark-black text-center tab:mt-[18px] mt-[14px]  " >We couldn&rsquo;t find that project.</motion.h3>
@@ -55,7 +55,7 @@ const ProjectNotFound = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.45, ease: "easeInOut" }}
                         viewport={{
-                            amount: .35,
+                            amount: .15,
                             once: true
                         }}
                         className="  w-full font-manrope font-medium text-[16px]/[24px] text-text-dark-grey text-center tab:mt-[18px] tab:mb-5 mt-[22px] mb-[22px]  ">The link might be incorrect, the project may have been removed, <br className=' tab:block hidden  ' /> or it could be in a different category.</motion.p>
@@ -65,7 +65,7 @@ const ProjectNotFound = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
                         viewport={{
-                            amount: .35,
+                            amount: .15,
                             once: true
                         }}
                         className=""

@@ -41,7 +41,6 @@
     opacity: 0;
     transition: all .2s ease-in-out;
     transform: translate(0, 0);
-    /* animation: slidingTooltip 10s .2s infinite ease-in-out; */
 }
 
 .projCard .arrow-btn:hover+.toolTip {
@@ -65,32 +64,94 @@
     transition: all .2s ease-in-out;
 }
 
+.projTab,
+.projTab * {
+    transition: all .35s ease-in-out;
+}
+
+.projTab {
+    font-family: var(--manrope-font);
+    border: 1px solid var(--color-border-color);
+    color: var(--color-bg-chocolate);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 32px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+
+.projTab[data-state="active"] {
+    background-color: var(--accent-color);
+    color: var(--color-text-light-white);
+    border: 1px solid var(--accent-color);
+}
+
+.projTab:hover {
+    background-color: var(--accent-color);
+    color: var(--color-text-light-white);
+    border: 1px solid var(--accent-color);
+}
+
+.projects .all-projects>article.projCard:first-child {
+    grid-column: 1 / -1;
+}
+
+.projects .mob-tab-list .swiper :is(.swiper-button-next, .swiper-button-prev) {
+    background: transparent;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    top: auto;
+    bottom: 30px;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--accent-color);
+    }
+}
+
+.projects .mob-tab-list .swiper .swiper-button-prev {
+    left: auto;
+    right: 55px;
+}
+
+.mob-tab-list :is(.swiper-button-prev.custom-prev, .swiper-button-next.custom-next) {
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    bottom: auto;
+    position: relative;
+    background-color: transparent;
+
+    svg {
+        color: var(--accent-color);
+        fill: transparent;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+
 @media (max-width: 500px) {
     .projCard {
         border: 1px solid var(--color-bg-chocolate);
         padding: 20px 15px;
     }
 }
-
-/* @keyframes slidingTooltip {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    25% {
-        transform: translate(-7px, 0px);
-    }
-
-    50% {
-        transform: translate(7px, 0px);
-    }
-
-    75% {
-        transform: translate(-7px, 0px);
-    }
-
-    100% {
-        transform: translate(0, 0);
-    }
-} */
 

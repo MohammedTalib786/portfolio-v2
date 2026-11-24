@@ -1,5 +1,5 @@
 import CustomButton from '../CustomButton/CustomButton';
-
+import { motion } from "motion/react"
 
 const CtaComp = () => {
 
@@ -9,12 +9,25 @@ const CtaComp = () => {
             <div className=" container flex justify-between tab:items-end items-start tab:flex-row flex-col tab:gap-0 gap-10  " >
 
                 <div>
-                    <span className=" font-slug text-accent ">Have Something In Mind?</span>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ amount: 0.25, once: true }}
+                        className="overflow-hidden"  >
+                        <motion.span
+                            variants={{
+                                hidden: { opacity: 0, y: 25 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.75, delay: .15, ease: "easeInOut" }}
+
+                            className=" origin-left block font-slug text-accent "  >Have Something In Mind?</motion.span>
+                    </motion.div>
+
                     <h3 className=" mt-5 font-cta-h text-text-dark-black  " >Let&rsquo;s make something <br className=" gt-tab:block hidden " />useful — and unmistakably <br className=" gt-tab:block hidden " />yours.</h3>
                 </div>
 
                 <div className=" "  >
-
                     <CustomButton
                         as='Link'
                         to="#contact-form"

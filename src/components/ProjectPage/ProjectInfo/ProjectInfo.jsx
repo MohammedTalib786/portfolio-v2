@@ -17,66 +17,68 @@ const ProjectInfo = ({ project }) => {
 
         <div className="  tab:py-20 py-13  flex flex-col  " >
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{
-              amount: .35,
-              once: true
-            }}
-
-            className="  font-dm-serif font-normal tab:text-[48px]/[48px] text-[36px]/[42px] text-text-dark-black " >
-            {project?.projectName}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.15, ease: "easeInOut" }}
-            viewport={{
-              amount: .35,
-              once: true
-            }}
-
-            className=" font-manrope font-normal gt-tab:text-[24px]/[34px] text-[18px]/[28px] text-text-dark-black my-6 " >
-            {project?.shortDescription}
-          </motion.p>
-
           <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.25, ease: "easeInOut" }}
-            viewport={{
-              amount: .35,
-              once: true
-            }}
-
-            className=" flex w-full  "  >
-
-            <CustomButton
-              href={project?.projectURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" button button-primary still_icon "
-              icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" z-[99] w-4 h-4 -rotate-45 " >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>}
-            >
-              View Live Project
-            </CustomButton>
-
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="overflow-hidden   "  >
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              transition={{ duration: .75, ease: "easeInOut" }}
+              className="  font-dm-serif font-normal tab:text-[48px]/[48px] text-[30px]/[36px] text-text-dark-black uppercase tracking-[1px] "
+            >{project?.projectName}</motion.h1>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.65, ease: "easeInOut" }}
-            viewport={{
-              amount: .35,
-              once: true
-            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="overflow-hidden my-6  "  >
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              transition={{ duration: .75, delay: .25, ease: "easeInOut" }}
+              className=" font-manrope font-normal gt-tab:text-[20px]/[28px] text-[18px]/[26px] text-text-dark-black  "   >{project?.shortDescription}</motion.p>
+          </motion.div>
 
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className=" overflow-hidden w-fit "  >
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 25 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              transition={{ duration: 0.75, delay: .5, ease: "easeInOut" }}
+              className=" "   >
+
+              <CustomButton
+                href={project?.projectURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" button button-primary still_icon "
+                icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" z-[99] w-4 h-4 -rotate-45 " >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>}
+              >
+                View Live Project
+              </CustomButton>
+
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.65, ease: "easeInOut" }}
+            viewport={{ once: true }}
             className=" mt-15 mb-10 " ref={fancyboxRef}  >
             <a data-fancybox href={project?.thumbnail} data-caption={`${project?.projectName}&nbsp;&nbsp;|&nbsp;&nbsp;Project reference image`} >
 

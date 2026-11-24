@@ -22,7 +22,7 @@ const ScrollToTopBtn = () => {
         <>
             <button
                 className={` ${isVisible ? "onScrollBtn" : ""} 
-                opacity-0 pointer-events-none scrollToTopBtn bg-accent w-[35px] h-[35px] text-white flex justify-center items-center fixed z-[9999] cursor-pointer `}
+                opacity-0 pointer-events-none scrollToTopBtn bg-accent w-[35px] h-[35px] text-white flex justify-center items-center fixed z-[99] cursor-pointer `}
                 onClick={scrollToTop} >
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" -rotate-90 w-[20px] h-[20px]  ">

@@ -11,10 +11,12 @@ const ProjectCard = ({
     projectURL
 }) => {
 
+    // console.log('card shortDescription', shortDescription.split('') )
+    // console.log('card shortDescription', shortDescription.slice(0, 110))
+
     return (
         <>
-            <article
-                className=" projCard w-full relative  "  >
+            <article  className=" projCard w-full relative  "  >
 
                 <Link
                     to={`/projects/${slug}`}
@@ -32,7 +34,9 @@ const ProjectCard = ({
                     <div className=" w-full ">
                         <span className=" font-slug text-accent  " >{techStack}</span>
                         <h4 className=" mt-2  font-h4 text-text-dark-black   " >{projectName}</h4>
-                        <p className=" mt-3 text-text-dark-grey font-manrope font-normal text-[14px]/[24px] " >{shortDescription}</p>
+                        <p className=" flex tab:hidden mt-3 text-text-dark-grey font-manrope font-normal text-[14px]/[24px] " >{shortDescription.slice(0, 110)}...</p>
+                        {/* <p className=" flex tab:hidden mt-3 text-text-dark-grey font-manrope font-normal text-[14px]/[24px] " >{shortDescription}</p> */}
+                        <p className=" hidden tab:flex mt-3 text-text-dark-grey font-manrope font-normal text-[14px]/[24px] " >{shortDescription}</p>
                     </div>
 
                     <div className=" min-w-10 w-auto relative " >
@@ -60,7 +64,6 @@ const ProjectCard = ({
                             </svg>}
                         >View Details
                         </CustomButton>
-
 
                         <CustomButton
                             href={projectURL}

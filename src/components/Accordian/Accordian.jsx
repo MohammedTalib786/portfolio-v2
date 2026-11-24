@@ -71,8 +71,8 @@ const Accordian = () => {
                                 className='AccordionContent  font-manrope font-normal text-[14px]/[24px] dang-cont '  >
                                 <ul className='skills-badge m-0 font-manrope gt-tab:text-[16px]/[24px] text-[14px]/[20px] font-normal faq-content px-5 pb-5 flex flex-wrap items-center justify-start gap-[14px]   '  >
                                     {
-                                        elem.content.split(",").map(listSkill => <li
-                                            className=' py-[5px] px-4 rounded-[6px] bg-[#ffffff2e] tracking-[.8px] '
+                                        elem.content.split(",").map(listSkill => <li 
+                                            className=' py-[5px] px-4 rounded-[6px] bg-[#ffffff2e] tracking-[.8px] cursor-default  ' 
                                             key={listSkill.toLowerCase().split(' ').filter(str => str !== "").join('-')}
                                             id={listSkill.toLowerCase().split(' ').filter(str => str !== "").join('-')}
                                         >{listSkill}</li>)

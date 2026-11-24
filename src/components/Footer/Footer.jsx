@@ -6,7 +6,6 @@ import { handleHashClick } from "../../utils/handleHashClick";
 
 
 const Footer = () => {
-
     let currentYear = new Date().getFullYear();
 
     return (
@@ -122,7 +121,7 @@ const Footer = () => {
 
                             <li>
                                 <a
-                                    href="https://x.com/STalib01786"
+                                    href="https://x.com/shaikhtalib786"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className=" font-manrope text-[14px]/[20px] font-normal text-[#f6f3eea6] "  >

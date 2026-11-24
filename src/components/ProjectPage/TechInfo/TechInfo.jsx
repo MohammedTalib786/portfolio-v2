@@ -6,22 +6,8 @@ const TechInfo = ({ project }) => {
 
   let tech = project?.supportingTechnologies ?? [];
 
-  // console.log('tech', tech)
-
-  // tech.map(elem => {
-  //   // console.log('elem', elem)
-
-  //   // console.log('get cat', elem.category)
-  //   // console.log('create id', elem.category.trim().toLowerCase().split(' ').join('-'))
-
-  // })
-
   const textRef = useRef(null);
-
-  const isInView = useInView(textRef, {
-    once: true,
-    amount: .35,
-  });
+  const isInView = useInView(textRef, { once: true, });
 
   return (
 
@@ -31,37 +17,31 @@ const TechInfo = ({ project }) => {
 
         <div className="  " >
 
-          <motion.h2
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{
-              amount: .1,
-              once: true
-            }}
+          <div className=" overflow-hidden mb-3  ">
 
-            ref={textRef}
+            <motion.h2
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: .75, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              ref={textRef}
+              className=" font-h3 text-text-dark-black  "  >Built with</motion.h2>
 
-            className=" font-h3 text-text-dark-black mb-3 " >Built with</motion.h2>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={
-              isInView
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 20 }
-            }
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-              delay: .25
-            }}
-            viewport={{
-              amount: .1,
-              once: true
-            }}
-
-            className=" w-full font-medium font-para-norm text-text-dark-black " >The core technology, supporting tools and integrations behind this project.</motion.p>
+          <motion.div
+            initial="hidden"
+            whileInView={isInView ? "visible" : "hidden"}
+            viewport={{ once: true }}
+            className="overflow-hidden w-full  "  >
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              transition={{ duration: 0.75, delay: .15, ease: "easeInOut" }}
+              className="  font-medium font-para-norm text-text-dark-black "   >The core technology, supporting tools and integrations behind this project.</motion.p>
+          </motion.div>
 
         </div>
 

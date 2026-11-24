@@ -7,15 +7,12 @@ import SEO from "../../components/SEO/SEO";
 
 const Home = () => {
 
-
   return (
     <>
-
-      <SEO 
+      <SEO
         title="Mohammed Talib — WordPress & Front-End Developer"
-        description="I'm Mohammed Talib, a Mumbai-based web developer focused on WordPress, custom themes, WooCommerce, and front-end development with React." 
-        path="/"
-      />
+        description="I'm Mohammed Talib, a Mumbai-based web developer focused on WordPress, custom themes, WooCommerce, and front-end development with React."
+        path="/" />
 
       <HeroSection />
 

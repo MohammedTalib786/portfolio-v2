@@ -1,18 +1,32 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaRegEnvelope } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import ContactForm from './ContactForm'
-
+import { motion } from "motion/react"
 
 const ContactFormSect = () => {
 
     return (
-
         <section className="contact-form w-full desktop:py-28 tab:py-20 py-13 " id="contact-form"  >
 
             <div className=" container flex gap-14 gt-tab:flex-row flex-col ">
 
                 <div className=" gt-tab:w-[40%] w-full flex flex-col  " >
-                    <p className=" font-slug text-accent  " >Contact details</p>
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ amount: 0.25, once: true }}
+                        className="overflow-hidden"
+                    >
+                        <motion.span
+                            variants={{
+                                hidden: { opacity: 0, y: 25 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.75, delay: .15, ease: "easeInOut" }}
+
+                            className=" origin-left block font-slug text-accent "  >Contact details</motion.span>
+                    </motion.div>
 
                     <div className=" pt-6 mt-8  border-t border-bg-chocolate "  >
 
@@ -36,7 +50,7 @@ const ContactFormSect = () => {
                         </a>
 
                         {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> X.com */}
-                        <a href="https://x.com/STalib01786"
+                        <a href="https://x.com/shaikhtalib786"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="contact-links relative mb-7 flex items-center justify-between  "  >
@@ -47,7 +61,7 @@ const ContactFormSect = () => {
 
                             <span
                                 className=" contact-links flex items-center gap-2  font-manrope tab:text-[16px]/[24px] text-[14px]/[20px] font-semibold text-text-dark-black " >
-                                @STalib01786
+                                @shaikhtalib786
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className=" mt-1 w-4 h-4 -rotate-45 text-text-dark-black " >
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                 </svg>
